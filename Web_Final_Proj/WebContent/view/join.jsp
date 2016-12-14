@@ -748,4 +748,5 @@
 	<a href="index" class="button button-style1">√Îº“</a>
 	</div>	
 </body>
+<jsp:include page="./footer.jsp"></jsp:include>
 </html>
