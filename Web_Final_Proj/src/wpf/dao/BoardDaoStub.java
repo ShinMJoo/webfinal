@@ -125,12 +125,40 @@ public class BoardDaoStub implements BoardDao{
 		pstmt.setString(3, board.getUserId());
 		
 		// 4. query start
+		result = pstmt.executeUpdate();
+		
+		if(result == 1){
+			System.out.println("Content Insert Complete! & 게시글 등록 완료!");
+		}
 	}
 
 	@Override
 	public List<Board> getBoardByPage(Connection con, int page) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		List<Board> boards = new ArrayList<>();
+		ResultSet rset = null;
+		
+		// 1. query create
+		String query = "select * from (select sub.*, rownum as rnum "
+				+ "from (select * from board) sub"
+				+ ") where rnum>=? and rnum <= ?";
+		
+		// 3. statement create
+		PreparedStatement pstmt = con.prepareStatement(query);
+		pstmt.setInt(1, BOARD_PER_PAGE*page-9);
+		pstmt.setInt(2, BOARD_PER_PAGE*page);
+		
+		rset = pstmt.executeQuery();
+		
+		while(rset.next()){
+			Integer boardNo = rset.getInt("board_no");
+			String boardTitle = rset.getString("board_title");
+			String boardContent = rset.getString("board_contnet");
+			Date boardDate = rset.getDate("board_date");
+			String userId = rset.getString("user_id");
+			
+			boards.add(new Board(boardNo, boardTitle, boardContent, boardDate, userId));
+		}
+		return boards;
 	}
 
 }
