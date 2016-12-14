@@ -35,16 +35,5 @@ public class Users implements Serializable{
 	
 	/** 사용자_brand. */
 	private String userBrand;
-	
-	public Users(String userId, String userPass, String userName, String userEmail, String userPhone, int userBirth, String userBrand) {
-		super();
-		this.userId = userId;
-		this.userPass = userPass;
-		this.userName = userName;
-		this.userEmail = userEmail;
-		this.userPhone = userPhone;
-		this.userBirth = userBirth;
-		this.userBrand = userBrand;
-	}
 
 }
