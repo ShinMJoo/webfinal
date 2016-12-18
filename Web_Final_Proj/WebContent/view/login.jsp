@@ -1,3 +1,6 @@
+<%@page import="wpf.dto.Users"%>
+<%@page import="wpf.service.UserServiceImpl"%>
+<%@page import="wpf.service.UserService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -103,6 +106,28 @@
 </head>
 <jsp:include page="./header.jsp"></jsp:include>
 <body class="header">
+
+	<%
+		String id = request.getParameter("id");
+		String pass = request.getParameter("pass");
+		
+		UserService us = UserServiceImpl.getUserServiceImpl();
+		Users user = null;
+		if(id != null){
+			user = us.login(id, pass);
+		}
+	%>
+
+	<%
+		if(user != null){
+			%>
+			<script>
+			alert("로그인 성공");
+			location.href= "main.jsp";
+			</script>
+			<% 
+		}
+	%>
    
    
 
@@ -117,53 +142,42 @@
    <div id="container">
       <div class="contents">
          <div class="login">
-         <%--    <%
-               Member user = (Member) session.getAttribute("user");
-            %>
-            <%
-               if (user == null) {
-            %> --%>
 
-            <form class="signUp" id="signupForm" action="loginSuccess"
+            <form class="signUp" id="signupForm" action="login.jsp"
                method="post">
                <fieldset style="border: 1px solid: #e8e8e8; vertical-align: top;">
                   <legend style ="text-align:center;">회원로그인</legend>
                   <div>
                   <div>
-                     <label  class="id">ID</label> 
-                     <input class="id1" type="text" name="id" id="member_id" />
+                     <label class="id" for="id">ID</label> 
+                     <input class="id1" type="text" name="id" id="id" />
                   </div>
                   
                   <div >
-                     <label class="password">PW</label> 
-                     <input class="password1" type="password" name="password" id="member_passwd" />
+                     <label class="password" for="pass">PW</label> 
+                     <input class="password1" type="password" name="pass" id="pass" />
                   </div>
                   </div>
                   <p>
                   
                   
-                     <%-- <a class="loginButton" href="<%=request.getContextPath()%>/index2">로그인</a> --%>
                   <div class= "b">                     
-                     <input type="submit" value="  로그인  " class="button-style1">
+                     <input type="submit" value="로그인  " class="button-style1">
                   </div>
                   <br>
                   
                   <div class="find">
-                     <a href="findId"> <input type="button"  value="아이디 찾기" /></a></li>
-                     <a href="findPass"> <input type="button"  value="비밀번호 찾기" /></a> </li>
+                     <a href="findId"> <input type="button"  value="아이디 찾기" /></a>
+                     <a href="findPass"> <input type="button"  value="비밀번호 찾기" /></a>
                   <br>
                   <p>
                   
                   </div>
-                  
-                  
-                  
-                  
- 
+                </fieldset>
+              </form>
     </div>
-         
-      </div>
    </div>
+  </div>
 
 
 
