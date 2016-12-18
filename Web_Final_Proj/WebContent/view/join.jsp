@@ -1,3 +1,6 @@
+<%@page import="wpf.dto.Users"%>
+<%@page import="wpf.service.UserServiceImpl"%>
+<%@page import="wpf.service.UserService"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -75,6 +78,33 @@
 <body>
 </head>
 <body class="header">
+	
+	<%
+		String id = request.getParameter("id");
+		String pass = request.getParameter("pass");
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String phone = request.getParameter("phone");
+		String sTbirth = request.getParameter("birth");
+		String brand = request.getParameter("brand");
+		Integer birth = 0;
+		if(sTbirth != null){
+			birth = Integer.parseInt(sTbirth);
+		}
+		UserService us = UserServiceImpl.getUserServiceImpl();
+		Users user = new Users(id, pass, name, email, phone, birth, brand);
+		Boolean result = us.join(user);
+	%>
+	<%
+		if(result == true){
+			%>
+			<script>
+				alert("회원가입 성공! 로그인해주세요.");
+				location.href= "login.jsp";
+			</script>
+			<%
+		}
+	%>
 	<jsp:include page="./header.jsp"></jsp:include>
 	<!-- Main -->
 	
@@ -91,7 +121,7 @@
 	/ico_required.gif"></img>
 	필수입력사항</p>
 	<hr><p>
-	<form method="post" action="join" enctype="multipart/form-data" id="myform" onsubmit="return checkCheckBoxes(this);">
+	<form method="post" action="join.jsp" id="myform">
 	<div class="boardWrite">
 		<table border="1" summary="">
 			<tbody>
@@ -102,7 +132,7 @@
 					/ico_required.gif"></img>
 					</th>
 				<td>
-					<input name="memId" class="inputTypeText" id="memId" type="text"/>
+					<input name="id" class="inputTypeText" id="id" type="text"/>
 					
 					<input type="button" id="check" class="check"  value="ID 중복확인"/>
 					(영문소문자/숫자, 4~16자)
@@ -117,8 +147,8 @@
 					/ico_required.gif"></img>
 					</th>
 				<td>
-					<label for="memPassword"></label> 
-					<input type="password" name="memPassword" placeholder="영문+숫자조합8이상"/>
+					<label for="pass"></label> 
+					<input type="password" name="pass" id="pass" placeholder="영문+숫자조합8이상"/>
 				</td>
 				</tr>
 				
@@ -141,8 +171,8 @@
 					/ico_required.gif"></img>
 					</th>
 					<td>
-						<label for="memName" class="inputlabel"></label> 
-						<input type="text" name="memName" />
+						<label for="name" class="inputlabel"></label> 
+						<input type="text" name="name" id="name"/>
 					</td>
 				
 				</tr>
@@ -172,7 +202,7 @@
 							<option value="KT" label="KT"/>
 							<option value="U+" label="U+"/>
 						</select> 
-						<input type="text" name="memPhone" />
+						<input type="text" name="phone" id="phone"/>
 						<!-- <input name="mobile[]" id="mobile3" type="text" maxlength="4"></input> -->
 					</td>
 				</tr>
@@ -184,8 +214,29 @@
 					/ico_required.gif"></img>
 					</th>
 					<td>
-						<label for="memEmail" class="inputlabel"></label>
-						<input type="email" name="memEmail" />
+						<label for="email" class="inputlabel"></label>
+						<input type="text" name="email" id="email"/>
+					</td>
+				</tr>
+				<tr>
+					<th>생년월일</th>
+					<td>
+						<input type="number" name="birth" id="birth">
+					</td>
+				</tr>
+				<tr>
+					<th>좋아하는 브랜드</th>
+					<td>
+						<select name="brand">
+							<option value="angel" label="엔젤리너스"></option>
+							<option value="bene" label="카페베네"></option>
+							<option value="ediya" label="이디야커피"></option>
+							<option value="hallys" label="할리스커피"></option>
+							<option value="pascucci" label="파스쿠찌"></option>
+							<option value="starbucks" label="스타벅스"></option>
+							<option value="tom" label="탐앤탐스"></option>
+							<option value="twosome" label="투썸플레이스"></option>
+						</select>
 					</td>
 				</tr>
 			<tr>
@@ -199,11 +250,13 @@
 			</tbody>
 		</table>
 	</div>
-	
 	<div class="joinCancel">
-	<input type="submit" class="button button-style1" value="가입"/>
-	<a href="index" class="button button-style1">취소</a>
-	</div>	
+		<input type="submit" class="button button-style1" value="가입"/>
+		<a href="index" class="button button-style1">취소</a>
+	</div>
+	</form>
+	
+		
 </body>
 <jsp:include page="./footer.jsp"></jsp:include>
 </html>

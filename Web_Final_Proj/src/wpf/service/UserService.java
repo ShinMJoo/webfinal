@@ -7,5 +7,5 @@ import wpf.dto.Users;
 public interface UserService {
 	
 	Users login(String id, String pass);
-	void join(Users user);
+	boolean join(Users user);
 }

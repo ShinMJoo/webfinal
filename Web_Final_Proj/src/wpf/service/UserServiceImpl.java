@@ -46,8 +46,10 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public void join(Users user) {
+	public boolean join(Users user) {
 
+		boolean val = false;
+		  
 		// 1. 공급 할 con 생성
 		Connection con = DBUtil.getDBUtil().getConnection();
 		try{
@@ -57,7 +59,7 @@ public class UserServiceImpl implements UserService{
 			ud.insertUsers(con, user);
 			System.out.println("Join Complete!");
 			con.commit();
-			
+			val = true;
 		} catch(SQLException | RuntimeException e){
 			// change data rollback();
 			DBUtil.getDBUtil().rollback(con);
@@ -65,6 +67,9 @@ public class UserServiceImpl implements UserService{
 			DBUtil.getDBUtil().setAutoCommit(con, true);
 			DBUtil.getDBUtil().close(con);
 		}
+
+		return val;
 	}
+	
 
 }
