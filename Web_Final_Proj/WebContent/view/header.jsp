@@ -48,7 +48,7 @@
 		</li>
 		
 		<li style="white-space: nowrap;">
-		<a class="icon fa-retweet" href="login.jsp">
+		<a class="icon fa-retweet" href="login2.jsp">
 		<span>LOGIN</span>
 		</a>
 		</li>
