@@ -23,7 +23,6 @@ public class DBUtil {
 	static Logger logger = LoggerFactory.getLogger(DBUtil.class);
 
 	private DBUtil() {
-		loadProp();
 	}
 
 	private static DBUtil util = new DBUtil();
@@ -36,7 +35,7 @@ public class DBUtil {
 	 * DataSource에서 Connection 객체를 생성후 리턴한다.
 	 * @return
 	 */
-	// DB 연결 정보를 저장할 Properties
+/*	// DB 연결 정보를 저장할 Properties
 		Properties dbConfig;
 
 		// dbConfig.txt file에서 속성 loading
@@ -45,14 +44,14 @@ public class DBUtil {
 			dbConfig = new Properties();
 
 			// 2. dbConfig file에 stream connect
-			File file = new File("./src/dbConfig.txt");
+			File file = new File("/src/dbConfig.txt");
 			try (InputStream input = new FileInputStream(file)) {
 				dbConfig.load(input);
 			} catch (IOException e) {
 				logger.trace("DB 환경 구축 중 문제 발생!: {}", e);
 			}
 			logger.trace("DB 환경 확인: {}", dbConfig);
-		}
+		}*/
 
 		// DriverManager create & connection create
 		Connection con = null;
@@ -60,10 +59,10 @@ public class DBUtil {
 		public Connection getConnection() {
 			try {
 				// 1. driver loading
-				Class.forName(dbConfig.getProperty("driver"));
+				Class.forName("oracle.jdbc.driver.OracleDriver");
 				// 2. DriverManager를 통해 Connection get
-				con = DriverManager.getConnection(dbConfig.getProperty("url"), dbConfig.getProperty("user"),
-						dbConfig.getProperty("pass"));
+				con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XE", "wp",
+						"tiger");
 				// 3. Connection get logging
 				logger.trace("connection check: {}", con);
 			} catch (ClassNotFoundException | SQLException e) {

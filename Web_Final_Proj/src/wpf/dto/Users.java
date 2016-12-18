@@ -15,6 +15,15 @@ public class Users implements Serializable{
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 	
+	public Users(String userId, String userPass, String userName, String userEmail, String userPhone) {
+		super();
+		this.userId = userId;
+		this.userPass = userPass;
+		this.userName = userName;
+		this.userEmail = userEmail;
+		this.userPhone = userPhone;
+	}
+
 	/** 사용자_id. */
 	private String userId;
 	
