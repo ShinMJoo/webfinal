@@ -54,7 +54,7 @@
 		</li>
 		
 		<li style="white-space: nowrap;">
-		<a class="icon fa-sitemap" href="join2.jsp">
+		<a class="icon fa-sitemap" href="join.jsp">
 		<span>JOIN</span>
 		</a>
 		</li>
