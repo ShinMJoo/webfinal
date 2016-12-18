@@ -34,7 +34,7 @@
 	<div id="header-wrapper"> 
 	<div id ="header" class="container">
 		<h1 id = "logo">
-		<a href ="index.html">카페 브랜드 완전정복</a>
+		<a href ="main.jsp">카페 브랜드 완전정복</a>
 		</h1>
 		<p>브랜드별 카페 음료 및 브런치를 알려드립니다.</p>
 	</div>
@@ -42,19 +42,19 @@
 	<nav id="nav">
 	<ul>
 		<li style="white-space: nowrap;">
-		<a class="icon fa-home" href="">
+		<a class="icon fa-home" href="introduce.jsp">
 		<span>INTRODUCE</span>
 		</a>
 		</li>
 		
 		<li style="white-space: nowrap;">
-		<a class="icon fa-retweet" href="">
+		<a class="icon fa-retweet" href="login.jsp">
 		<span>LOGIN</span>
 		</a>
 		</li>
 		
 		<li style="white-space: nowrap;">
-		<a class="icon fa-sitemap" href="">
+		<a class="icon fa-sitemap" href="join2.jsp">
 		<span>JOIN</span>
 		</a>
 		</li>

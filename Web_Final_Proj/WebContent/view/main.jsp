@@ -38,7 +38,7 @@
 	<div class ="whole">
 	<div class ="row">
 	<section>
-	<a href="" class="image featured">
+	<a href="1.jsp" class="image featured">
 		<img src ="../images/1.jpg" alt>
 	</a>
 	<header>
@@ -47,7 +47,7 @@
 	</section>
 	
 	<section>
-	<a href="" class="image featured">
+	<a href="2.jsp" class="image featured">
 		<img src ="../images/2.jpg" alt>
 	</a>
 	<header>

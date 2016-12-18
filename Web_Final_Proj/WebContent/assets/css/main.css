@@ -1069,7 +1069,7 @@
 /* Basic */
 
 	body {
-		background: #f0f0f0;
+		background: #FFFFFF;
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
 		color: #777;
@@ -1349,7 +1349,7 @@
 		display: block;
 		border: 0;
 		background: #e8e8e8;
-		width: 100%;
+		width: 30%;
 		box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
 		border-radius: 4px;
 		line-height: 1.25em;
