@@ -20,9 +20,9 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <nav class="w3-sidenav w3-white w3-animate-left w3-center w3-text-grey w3-collapse w3-top" style="z-index:3;width:300px;font-weight:bold" id="mySidenav"><br>
   <h3 class="w3-padding-64"><b>SOME<br>NAME</b></h3>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-padding w3-hide-large">CLOSE</a>
-  <a href="form.jsp" onclick="w3_close()" class="w3-padding">Hot Coffee</a> 
-  <a href="psccicemenu1.jsp" onclick="w3_close()" class="w3-padding">ICE Coffee</a> 
-  <a href="psccbkmenu1.jsp" onclick="w3_close()" class="w3-padding">BaKery </a>
+  <a href="./1.jsp" onclick="w3_close()" class="w3-padding">Hot Coffee</a> 
+  <a href="./4.jsp" onclick="w3_close()" class="w3-padding">ICE Coffee</a> 
+  <a href="./5.jsp" onclick="w3_close()" class="w3-padding">BaKery </a>
 </nav>
 
 <!-- Top menu on small screens -->
@@ -43,21 +43,21 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <!-- Photo grid -->
   <div class="w3-row">
     <div class="w3-third">
-      <img src="pscchot/coffee1.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
-      <img src="pscchot/coffee4.png" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
-      <img src="pscchot/coffee7.png" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+      <img src="../images/menu/coffee1.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
+      <img src="../images/menu/coffee4.png" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="../images/menu/coffee7.png" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
     </div>
 
     <div class="w3-third">
-      <img src="pscchot/coffee2.png" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
-      <img src="pscchot/coffee5.png" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
-      <img src="pscchot/coffee8.png" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+      <img src="../images/menu/coffee2.png" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
+      <img src="../images/menu/coffee5.png" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+      <img src="../images/menu/coffee8.png" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
     </div>
     
     <div class="w3-third">
-      <img src="pscchot/coffee3.png" style="width:100%" onclick="onClick(this)" alt="Canoeing again">
-      <img src="pscchot/coffee6.png" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing">
-      <img src="pscchot/coffee9.png" style="width:100%" onclick="onClick(this)" alt="What a beautiful day!">
+      <img src="../images/menu/coffee3.png" style="width:100%" onclick="onClick(this)" alt="Canoeing again">
+      <img src="../images/menu/coffee6.png" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing">
+      <img src="../images/menu/coffee9.png" style="width:100%" onclick="onClick(this)" alt="What a beautiful day!">
     </div>
   </div>
 

@@ -8,7 +8,7 @@
 <html>
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-   <title>Insert title here</title>
+   <title>카완정 로그인</title>
    
    
    <link rel="stylesheet" href="<%=request.getContextPath() %>/assets/css/main.css" /> 

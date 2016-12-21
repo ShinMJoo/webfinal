@@ -13,15 +13,16 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
 .w3-third img:hover{opacity: 1}
 </style>
+<jsp:include page="./header.jsp"></jsp:include>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidenav/menu -->
 <nav class="w3-sidenav w3-white w3-animate-left w3-center w3-text-grey w3-collapse w3-top" style="z-index:3;width:300px;font-weight:bold" id="mySidenav"><br>
   <h3 class="w3-padding-64"><b>SOME<br>NAME</b></h3>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-padding w3-hide-large">CLOSE</a>
-  <a href="form.jsp" onclick="w3_close()" class="w3-padding">Hot Coffee</a> 
-  <a href="psccicemenu1.jsp" onclick="w3_close()" class="w3-padding">ICE Coffee</a> 
-  <a href="psccbkmenu1.jsp" onclick="w3_close()" class="w3-padding">BaKery </a>
+  <a href="./1.jsp" onclick="w3_close()" class="w3-padding">Hot Coffee</a> 
+  <a href="./4.jsp" onclick="w3_close()" class="w3-padding">ICE Coffee</a> 
+  <a href="./5.jsp" onclick="w3_close()" class="w3-padding">BaKery </a>
 </nav>
 
 <!-- Top menu on small screens -->
@@ -42,21 +43,21 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <!-- Photo grid -->
   <div class="w3-row">
     <div class="w3-third">
-      <img src="psccice/psccice1.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
-      <img src="psccice/psccice4.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
-       <img src="psccice/psccice7.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
+      <img src="../images/menu/psccice1.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
+      <img src="../images/menu/psccice4.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
+       <img src="../images/menu/psccice7.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
     </div>
 
     <div class="w3-third">
-      <img src="psccice/psccice2.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
-      <img src="psccice/psccice5.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
-       <img src="psccice/psccice8.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
+      <img src="../images/menu/psccice2.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
+      <img src="../images/menu/psccice5.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
+       <img src="../images/menu/psccice8.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
     </div>
     
     <div class="w3-third">
-      <img src="psccice/psccice3.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
-      <img src="psccice/psccice6.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
-       <img src="psccice/psccice9.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
+      <img src="../images/menu/psccice3.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
+      <img src="../images/menu/psccice6.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
+       <img src="../images/menu/psccice9.png" style="width:100%" onclick="onClick(this)" alt="따뜻한 아메리카노 먹으면 빠져든다">
     </div>
   </div>
 

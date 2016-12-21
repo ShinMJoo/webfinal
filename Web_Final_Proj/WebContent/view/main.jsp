@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>카페 브랜드 완전 정복</title>
 </head>
 <style>
 	#features-wrapper{
